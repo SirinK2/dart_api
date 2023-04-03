@@ -1,0 +1,21 @@
+name: new_practice
+description: A server app using the shelf package and Docker.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: '>=2.19.5 <3.0.0'
+
+dependencies:
+  args: ^2.3.0
+  content_length_validator: ^1.1.0
+  shelf: ^1.4.0
+  shelf_helmet: ^1.1.0
+  shelf_rate_limiter: ^1.0.1
+  shelf_router: ^1.1.0
+
+dev_dependencies:
+  http: ^0.13.0
+  lints: ^2.0.0
+  shelf_hotreload: ^1.4.0
+  test: ^1.21.0
