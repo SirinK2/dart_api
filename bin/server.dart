@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:content_length_validator/content_length_validator.dart';
@@ -47,7 +48,8 @@ Future<HttpServer> createServer() async {
       .addMiddleware(logRequests())
       .addMiddleware(
         maxContentLengthValidator(
-          maxContentLength: 20,
+          maxContentLength: 500,
+          errorResponse: Response(404, body: json.encode({"msg": "too big"}), headers: {"content-type": "application/json"})
         ),
       )
       .addMiddleware(rateLimiter.rateLimiter())

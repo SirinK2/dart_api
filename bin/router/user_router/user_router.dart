@@ -11,7 +11,7 @@ class UserRouter {
         (Request req) => Response(200,
             body: json.encode({"msg": "this is home page"}),
             headers: {"content-type": "application/json"}));
-    route.get('/profile', (Request req) => Response.ok('profile'));
+    route.get('/profile/<name>', (Request req, String name) => Response.ok('profile $name'));
     route.get('/setting', (Request req) => Response.ok('setting'));
 
     final pipleLine = Pipeline()

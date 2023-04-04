@@ -13,6 +13,7 @@ dependencies:
   shelf_helmet: ^1.1.0
   shelf_rate_limiter: ^1.0.1
   shelf_router: ^1.1.0
+  supabase: ^1.6.3
 
 dev_dependencies:
   http: ^0.13.0
